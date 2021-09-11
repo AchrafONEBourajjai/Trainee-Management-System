@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="546.0" prefWidth="716.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TraineeController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="100.0" prefWidth="718.0" style="-fx-background-color: #0081FF;">
+         <children>
+            <Text fill="WHITE" layoutX="241.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Trainee" textAlignment="CENTER" wrappingWidth="221.000005453825">
+               <font>
+                  <Font name="Roboto Medium" size="20.0" />
+               </font>
+            </Text>
+            <MaterialDesignIconView fx:id="iconeClose" fill="WHITE" glyphName="CLOSE" layoutX="677.0" layoutY="33.0" onMouseClicked="#closeStage" size="22.0" />
+            <ImageView fitHeight="86.0" fitWidth="173.0" layoutX="139.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/4824970-middle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="85.0" layoutX="463.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/school-building-icon-school-icon-vector-11563262711afphvdq07e.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXComboBox fx:id="level" focusColor="#0081ff" layoutX="61.0" layoutY="458.0" prefHeight="31.0" prefWidth="246.0" promptText="Level" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="509.0" layoutY="487.0" onAction="#insertData" prefHeight="38.0" prefWidth="173.0" style="-fx-background-color: #008F82;" text="Save " textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="16.0" wrappingWidth="34.0" />
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="lname" focusColor="#0081ff" labelFloat="true" layoutX="61.0" layoutY="252.0" onKeyPressed="#verifyText" onKeyTyped="#verifyText" prefHeight="31.0" prefWidth="246.0" promptText="Last Name">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXTextField>
+      <HBox alignment="BOTTOM_CENTER" fillHeight="false" layoutX="448.0" layoutY="252.0" spacing="5.0" />
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="122.0" prefHeight="14.0" prefWidth="692.0" spacing="2.0">
+         <children>
+            <Label prefHeight="4.0" prefWidth="130.0" style="-fx-background-color: #008F82; -fx-min-height: 4; -fx-pref-height: 4;" />
+            <Circle fill="#e8e9eb" radius="7.0" stroke="#f39c12" strokeType="INSIDE" strokeWidth="3.0" />
+            <Label prefHeight="4.0" prefWidth="283.0" style="-fx-background-color: #008F82; -fx-min-height: 4; -fx-pref-height: 4;" />
+            <Circle fill="#e8e9eb" radius="7.0" stroke="#f39c12" strokeType="INSIDE" strokeWidth="3.0" />
+            <Label prefHeight="4.0" prefWidth="130.0" style="-fx-background-color: #008F82; -fx-min-height: 4; -fx-pref-height: 4;" />
+         </children>
+      </HBox>
+      <JFXTextField fx:id="cin" focusColor="#0081ff" labelFloat="true" layoutX="61.0" layoutY="148.0" prefHeight="31.0" prefWidth="246.0" promptText="CIN">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="school" focusColor="#0081ff" labelFloat="true" layoutX="61.0" layoutY="354.0" onKeyPressed="#verifyText" onKeyTyped="#verifyText" prefHeight="31.0" prefWidth="246.0" promptText="school">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="speciality" focusColor="#0081ff" labelFloat="true" layoutX="61.0" layoutY="412.0" onKeyPressed="#verifyText" onKeyTyped="#verifyText" prefHeight="31.0" prefWidth="246.0" promptText="Speciality">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="city" focusColor="#0081ff" labelFloat="true" layoutX="61.0" layoutY="298.0" onKeyPressed="#verifyText" onKeyTyped="#verifyText" prefHeight="31.0" prefWidth="246.0" promptText="City">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="fname" focusColor="#0081ff" labelFloat="true" layoutX="61.0" layoutY="202.0" onKeyPressed="#verifyText" onKeyTyped="#verifyText" prefHeight="31.0" prefWidth="246.0" promptText="First Name">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="scity" focusColor="#0081ff" labelFloat="true" layoutX="396.0" layoutY="148.0" onKeyPressed="#verifyText" onKeyTyped="#verifyText" prefHeight="31.0" prefWidth="246.0" promptText="City of Shool">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="supervisor" focusColor="#0081ff" labelFloat="true" layoutX="396.0" layoutY="202.0" onKeyPressed="#verifyText" onKeyTyped="#verifyText" prefHeight="31.0" prefWidth="246.0" promptText="Supervisor">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="agrement" focusColor="#0081ff" layoutX="396.0" layoutY="298.0" prefHeight="31.0" prefWidth="246.0" promptText="Agrement" />
+      <JFXTextField fx:id="assign" focusColor="#0081ff" labelFloat="true" layoutX="396.0" layoutY="252.0" onKeyPressed="#verifyText" onKeyTyped="#verifyText" prefHeight="31.0" prefWidth="246.0" promptText="Assignment Service">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="from" layoutX="396.0" layoutY="385.0" prefHeight="29.0" prefWidth="246.0" promptText="From" />
+      <JFXDatePicker fx:id="to" layoutX="396.0" layoutY="429.0" prefHeight="29.0" prefWidth="246.0" promptText="To" />
+      <Label layoutX="396.0" layoutY="361.0" prefHeight="17.0" prefWidth="108.0" text="internship period :" textFill="#2d37f8" />
+      <JFXTextField fx:id="theme" focusColor="#0081ff" labelFloat="true" layoutX="61.0" layoutY="501.0" onKeyPressed="#verifyText" onKeyTyped="#verifyText" prefHeight="31.0" prefWidth="246.0" promptText="Theme">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

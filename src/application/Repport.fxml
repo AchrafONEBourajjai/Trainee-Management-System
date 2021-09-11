@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="515.0" prefWidth="938.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RepportController">
+   <children>
+      <Pane prefHeight="59.0" prefWidth="938.0" style="-fx-background-color: #0081FF;" stylesheets="@style.css">
+         <children>
+            <Text fill="WHITE" layoutX="360.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repport" textAlignment="CENTER" wrappingWidth="218.13671875">
+               <font>
+                  <Font name="Roboto Medium" size="27.0" />
+               </font>
+            </Text>
+            <MaterialDesignIconView fx:id="iconeClose" fill="WHITE" glyphName="CLOSE" layoutX="890.0" layoutY="36.0" onMouseClicked="#closeStage" size="22.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="19.0" layoutY="158.0" prefHeight="311.0" prefWidth="901.0">
+        <columns>
+          <TableColumn fx:id="ccin" prefWidth="64.0" text="cin" />
+          <TableColumn fx:id="cnom" prefWidth="86.0" text="nom" />
+            <TableColumn fx:id="cprenom" prefWidth="75.0" text="prenom" />
+            <TableColumn fx:id="cville" prefWidth="75.0" text="ville" />
+            <TableColumn fx:id="cniveau" prefWidth="75.0" text="niveau" />
+            <TableColumn fx:id="cspecialite" prefWidth="75.0" text="spécialité" />
+            <TableColumn fx:id="cservice" prefWidth="75.0" text="service" />
+            <TableColumn fx:id="caccord" prefWidth="75.0" text="accord" />
+            <TableColumn fx:id="ctheme" prefWidth="75.0" text="thème" />
+            <TableColumn fx:id="cdebut" prefWidth="75.0" text="date début" />
+            <TableColumn fx:id="cfin" prefWidth="75.0" text="date fin" />
+            <TableColumn fx:id="cencadrant" prefWidth="75.0" text="encadrant" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="find" layoutX="341.0" layoutY="113.0" prefHeight="25.0" prefWidth="241.0" promptText="search" />
+      <JFXButton fx:id="print" layoutX="795.0" layoutY="72.0" onAction="#generateRepport" prefHeight="27.0" prefWidth="115.0" style="-fx-background-color: orange;" text="print" />
+   </children>
+</AnchorPane>
